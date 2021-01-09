@@ -12,12 +12,42 @@ const rl = readline.createInterface({
 });
 
 // the function that will be called by the unit test below
-const rockPaperScissors = (hand1, hand2) => {
+// DO THIS
+const rockPaperScissors = function(hand1, hand2) {
 
-  // Write code here
-  // Use the unit test to see what is expected
-
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
+      return "It's a tie!";
 }
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
+      return "Hand two wins!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
+      return "Hand one wins!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
+      return "Hand one wins!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
+      return "It's a tie!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
+      return "Hand two wins!";
+} 
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
+      return "Hand two wins!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
+      return "Hand one wins!";
+}
+    if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
+      return "It's a tie!";
+}
+}
+
+
+
+
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
