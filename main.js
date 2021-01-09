@@ -41,7 +41,8 @@ const rockPaperScissors = function(hand1, hand2) {
 }
     if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
       return "It's a tie!";
-}
+} 
+    else return "That's not an appropriate RPS weapon! The only options are rock, paper, or scissors. Try, try again...";
 }
 
 
