@@ -15,33 +15,36 @@ const rl = readline.createInterface({
 // DO THIS
 const rockPaperScissors = function(hand1, hand2) {
 
+  // Modification of each hand to tripm and lowercase is on the single if statements. 
+  // Planning to test trim and lowercasing pre-if statements by adding an additional = to each statement to change equality
+
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
     return "It's a tie!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
     return "Hand two wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'rock') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
     return "Hand one wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
     return "Hand one wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
     return "It's a tie!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'paper') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
     return "Hand two wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'rock')) {
     return "Hand two wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'paper')) {
     return "Hand one wins!";
-}
+  }
   if ((hand1.replace(/\s+/g, '').toLowerCase() == 'scissors') && (hand2.replace(/\s+/g, '').toLowerCase() == 'scissors')) {
     return "It's a tie!";
-} 
+  }  
   else return "That's not an appropriate RPS weapon! The only options are rock, paper, or scissors. Try, try again...";
 }
 
