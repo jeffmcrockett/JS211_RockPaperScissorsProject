@@ -88,6 +88,35 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
     });
   });
+
+  //additional tests for RPS
+
+  describe ('RPS Unit test assignment', function(){
+
+    it('should handle bad input', function(){
+      let actual = rockPaperScissors('boot', 'roach');
+      let expected = "Boot";
+      assert.equal(actual, expected);
+    })
+
+    it('should handle vulgar language', function(){
+      let actual = rockPaperScissors("shit", "crap");
+      let expected = "No bad language please!";
+      assert.equal(actual, expected);
+    })
+
+    it('should launch a missile', function(){
+      let actual = rockPaperScissors('initiate', 'sequence');
+      let expected = "Launch sequence initiated!";
+      assert.equal(actual, expected);
+    })
+
+    it('should fail inputs that do not fit the requirements of this very simple game', function(){
+      let actual = rockPaperScissors('dynamite', 'mario');
+      let expected = "That's not an appropriate RPS weapon! The only options are rock, paper, or scissors. Try, try again...";
+      assert.equal(actual, expected);
+    })
+  })
 } else {
 
   // always returns ask the user for another input
